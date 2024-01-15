@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de IP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilo minimalista para la tabla vertical */
+        .table th, .table td {
+            border: none;
+            padding: 0.25rem;
+            vertical-align: top;
+        }
+
+        .table th {
+            text-align: left;
+            width: 30%;
+        }
+
+        .card {
+            width: 300px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .card-title {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Información de IP</h5>
+            </div>
+            <div class="card-body">
+               
+                
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <th scope="row">IP</th>
+                            <td><?php echo $datosIP["ip"]; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">País</th>
+                            <td><?php echo $datosIP["pais"]; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Continente</th>
+                            <td><?php echo $datosIP["continente"]; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Zona Horaria</th>
+                            <td><?php echo $datosIP["zona_horaria"]; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <?php
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y Popper.js (necesarios para algunas funcionalidades de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
